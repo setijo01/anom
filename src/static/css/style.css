@@ -8,8 +8,9 @@
     src: url(../fonts/DINPro-Regular.ttf);
 }
 
-::-webkit-scrollbar {
-    display: none;
+html, body
+{
+    height: 100%;
 }
 
 #cover_container {
@@ -22,9 +23,7 @@
     justify-content: center;
 }
 
-
-
-#cover_container svg {
+#icon-wrapper svg {
     vertical-align: middle;
     height: 30%;
     -webkit-animation-timing-function: ease-in;
@@ -45,6 +44,10 @@
 #cover_container div#icon-wrapper{
     fill:#252a35;
     color: #252a35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
     -webkit-transition: fill 0.5s; /* For Safari 3.1 to 6.0 */
     transition: fill 0.5s;
 }
@@ -127,6 +130,8 @@ section.about{
     width: 100%;
     background-image: linear-gradient(141deg, #9fb8ad 0%, #acc6db 51%, #becdd3 75%);
     border-bottom: 2px #d8ecef double;
+    justify-content: center;
+    display: flex;
 
 }
 
@@ -387,6 +392,25 @@ input, textarea {
     100% { transform: translateY(30px); }
 }
 
+@media (min-width: 576px) {
+    .container {
+        max-width: 776px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 968px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1192px;
+    }
+}
+
 @media (min-width: 1200px){
     div#image.col-sm-4 {
     	margin: auto 80px auto auto;
@@ -394,7 +418,13 @@ input, textarea {
 	div#skillbar.col-sm-4 {
 		margin: auto auto auto 80px;
 	}
+    .container {
+        max-width: 1400px;
+    }
 }
+
+
+
 
 .tooltip-inner {
     max-width: 200px;
